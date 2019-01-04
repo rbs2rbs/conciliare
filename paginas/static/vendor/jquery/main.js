@@ -17,15 +17,4 @@ $(function(){
             $("#top").addClass('dropmenu');
         }
     });
-    $("#titulo").css({"opacity":"0","margin-left":"0%"});
-});
-
-$(".slid1").ready(function(){
-    setTimeout(function(){
-        $("#titulo").animate({'opacity': '1','margin-left': '70%'},1000,'linear');
-        $("#titulo").animate({'margin-left': '100%'},400,function(){
-            $("#titulo").css({"opacity":"0","margin-left":"0%"});
-        });
-    }
-    ,500);
 });

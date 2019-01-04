@@ -1,0 +1,43 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLOWED_HOSTS	../conciliare/settings.py	/^ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']$/;"	kind:variable	line:28
+AUTH_PASSWORD_VALIDATORS	../conciliare/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:88
+BASE_DIR	../conciliare/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:16
+DATABASES	../conciliare/settings.py	/^DATABASES = {$/;"	kind:variable	line:77
+DEBUG	../conciliare/settings.py	/^DEBUG = True$/;"	kind:variable	line:26
+INSTALLED_APPS	../conciliare/settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:33
+LANGUAGE_CODE	../conciliare/settings.py	/^LANGUAGE_CODE = 'pt-BR'$/;"	kind:variable	line:107
+MIDDLEWARE	../conciliare/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:43
+PaginasConfig	../paginas/apps.py	/^class PaginasConfig(AppConfig):$/;"	kind:class	line:4
+ROOT_URLCONF	../conciliare/settings.py	/^ROOT_URLCONF = 'conciliare.urls'$/;"	kind:variable	line:53
+SECRET_KEY	../conciliare/settings.py	/^SECRET_KEY = 'i#723dw3ya@gsvkv(&5@vds1*j60d$4p(rd8ivh6ey=$*a#jr#'$/;"	kind:variable	line:23
+STATIC_ROOT	../conciliare/settings.py	/^STATIC_ROOT = os.path.join(BASE_DIR, 'static')/;"	kind:variable	line:122
+STATIC_URL	../conciliare/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:121
+TEMPLATES	../conciliare/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:55
+TIME_ZONE	../conciliare/settings.py	/^TIME_ZONE = 'America\/Sao_Paulo'$/;"	kind:variable	line:109
+USE_I18N	../conciliare/settings.py	/^USE_I18N = True$/;"	kind:variable	line:111
+USE_L10N	../conciliare/settings.py	/^USE_L10N = True$/;"	kind:variable	line:113
+USE_TZ	../conciliare/settings.py	/^USE_TZ = True$/;"	kind:variable	line:115
+WSGI_APPLICATION	../conciliare/settings.py	/^WSGI_APPLICATION = 'conciliare.wsgi.application'$/;"	kind:variable	line:71
+__init__.py	../conciliare/__init__.py	1;"	kind:file	line:1
+__init__.py	../paginas/__init__.py	1;"	kind:file	line:1
+__init__.py	../paginas/migrations/__init__.py	1;"	kind:file	line:1
+admin.py	../paginas/admin.py	1;"	kind:file	line:1
+application	../conciliare/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
+apps.py	../paginas/apps.py	1;"	kind:file	line:1
+inicial	../paginas/views.py	/^def inicial(request):$/;"	kind:function	line:3
+manage.py	../manage.py	1;"	kind:file	line:1
+models.py	../paginas/models.py	1;"	kind:file	line:1
+name	../paginas/apps.py	/^    name = 'paginas'$/;"	kind:variable	line:5
+settings.py	../conciliare/settings.py	1;"	kind:file	line:1
+tests.py	../paginas/tests.py	1;"	kind:file	line:1
+urlpatterns	../conciliare/urls.py	/^urlpatterns = [$/;"	kind:variable	line:19
+urlpatterns	../paginas/urls.py	/^urlpatterns = [$/;"	kind:variable	line:4
+urls.py	../conciliare/urls.py	1;"	kind:file	line:1
+urls.py	../paginas/urls.py	1;"	kind:file	line:1
+views.py	../paginas/views.py	1;"	kind:file	line:1
+wsgi.py	../conciliare/wsgi.py	1;"	kind:file	line:1

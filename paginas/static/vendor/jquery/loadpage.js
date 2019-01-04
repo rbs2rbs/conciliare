@@ -6,6 +6,7 @@ $(window).on('load',function(){
         // will fade out the whole DIV that covers the website.
         $("#preloader").delay(300).fadeOut("slow");
         $("html").removeClass('cl-preload');
-        $("html").addClass('cl-loaded');    
+        $("html").addClass('cl-loaded');
+        console.log("teste");    
     }); 
 });
