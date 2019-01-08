@@ -96,3 +96,12 @@
     }
 }
 
+
+.btn-primary{
+    background-color: #77badd !important;
+    border-color: #77badd !important;
+}
+.btn-primary:hover{
+    background-color: #202d40 !important;
+    border-color: #202d40 !important;
+}

@@ -1,12 +1,17 @@
-(function () {
-    var options = {
-        whatsapp: "5571992824498", // WhatsApp number
-        call_to_action: "Fale Conosco", // Call to action
-        position: "right", // Position may be 'right' or 'left'
-    };
-    var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
-    var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-    s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-    var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-})();
+$(window).scroll(function() {
+    var winScrollTop = $(window).scrollTop();
+    var winHeight = $(window).height();
+    var floaterHeight = $('#whats').outerHeight(true);
+    var fromBottom = 20;
+    var top = winScrollTop + winHeight - floaterHeight - fromBottom;
+	$('#whats').css({'top': top + 'px'});
+});
 
+$("#whats").on({
+    mouseenter :function(){
+        $("#whats").css("background-color","#202d40");
+    } ,
+    mouseleave :function(){
+        $("#whats").css("background-color","#77badd");
+    }
+});
