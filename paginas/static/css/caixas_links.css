@@ -1,0 +1,41 @@
+
+.btn-primary{
+    background-color: #77badd !important;
+    border-color: #77badd !important;
+}
+.btn-primary:hover{
+    background-color: #202d40 !important;
+    border-color: #202d40 !important;
+}
+
+div.card{
+    /* border-right: 1px solid !important; */
+    border-radius: 0;
+    border: 0;
+}
+
+div.divisor{
+    border-right: 1px solid;
+    height: 100px;
+    margin-top: 50px
+}
+
+.card-text{
+    font-size: 15px;
+    font-weight: 200;
+    min-height: 50px;
+}
+@media screen and (max-width: 768px){
+    div.card{
+        border-right: 0px solid !important;
+        border-bottom: 1px solid !important;
+        border-radius: 0;
+        border: 0;
+    }
+    div.divisor{
+        border-right: 0px solid;
+    }
+    .card-text{
+        min-height: 0px;
+    }
+}

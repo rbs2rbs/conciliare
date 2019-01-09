@@ -7,6 +7,5 @@ $(window).on('load',function(){
         $("#preloader").delay(300).fadeOut("slow");
         $("html").removeClass('cl-preload');
         $("html").addClass('cl-loaded');
-        console.log("teste");    
     }); 
 });

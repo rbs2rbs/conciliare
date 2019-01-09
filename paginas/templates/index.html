@@ -18,6 +18,8 @@
     <link href="{% static 'css/half-slider.css' %}" rel="stylesheet">
     <link href="{% static 'css/load.css' %}" rel="stylesheet">
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/caixas_links.css' %}" rel="stylesheet">
+    <link href="{% static 'css/servicos.css' %}" rel="stylesheet">
 
     <!-- Whats -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -113,8 +115,8 @@
     <section id="sobre" class="py-5">
       <div class="container">
         <h1>Alguns Links Uteis</h1>
-        <div class="row">
-          <div class="col-sm-3">
+        <div id="caixa" class="row">
+          <div class="col">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Certidões Negativas</h5>
@@ -123,7 +125,8 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-3">
+          <div class="divisor"></div>
+          <div class="col">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Agenda de Obrigações</h5>
@@ -132,7 +135,8 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-3">
+          <div class="divisor"></div>
+          <div class="col">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">Sites Úteis</h5>
@@ -141,7 +145,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="divisor"></div>
+            <div class="col">
                 <div class="card">
                   <div class="card-body">
                     <h5 class="card-title">Consultas</h5>
@@ -157,10 +162,15 @@
     <!-- Page Content -->
     <section id="servicos" class="py-5">
       <div class="container">
-        <h1>Half Slider by Start Bootstrap</h1>
-        <p>The background images for the slider are set directly in the HTML using inline CSS. The rest of the styles for this template are contained within the
-          <code>half-slider.css</code>
-          file.</p>
+        <h1>Nossos Serviços</h1>
+          <div class="row">
+            <div  class="col-sm-3 cont-icon">
+                <img class="icones"  src="{% static 'image/mao_dolar.svg' %}">
+            </div>
+            <div  class="col-sm-9">
+                <p>Como a contabilidade é algo imprescindível para todas as empresas, independentemente do seu porte, sendo também condição básica para que se possa valer do benefício tributário da distribuição de lucros isenta, efetuamos os registros de acordo com as normas e os pronunciamentos em vigor, evitando possíveis questionamentos em fiscalizações e em pareceres de auditoria. Atendemos a empresas internacionais com a elaboração das demonstrações contábeis em padrões globais como IFRS ou US GAAP.</p>
+            </div>
+          </div>
       </div>
     </section>
     <!-- Footer -->
@@ -197,6 +207,7 @@
     <script src="{% static 'vendor/jquery/main.js' %}"></script>
     <script src="{% static 'vendor/jquery/loadpage.js' %}"></script>
     <script src="{% static 'vendor/jquery/touche.js' %}"></script>
+    <script src="{% static 'vendor/jquery/caixas.js' %}"></script>
     <!-- WhatsHelp.io widget -->
     <script src="{% static 'vendor/jquery/whatsapp.js' %}"></script>
     <!-- /WhatsHelp.io widget -->
