@@ -1,12 +1,15 @@
 #servicos{
     background-color: #e2e2e2d7;
 }
-.icones{
-    height: 50%;
-    weight: 50%;
-}
+
 .cont-icon{
     border: 2px solid;
     border-radius: 50%;
+    height: 100px;
+    weight: 50%;
 } 
-
+#dinheiro{
+    background-image: url('image/maodolar.svg');
+    background-repeat: no-repeat;
+    /* background-size: contain; */
+}

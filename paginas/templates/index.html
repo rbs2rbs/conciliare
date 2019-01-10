@@ -14,6 +14,9 @@
     <!-- Bootstrap core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
 
+    <!-- FontsSome -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="{% static 'css/half-slider.css' %}" rel="stylesheet">
     <link href="{% static 'css/load.css' %}" rel="stylesheet">
@@ -63,8 +66,8 @@
       <!-- só o conteúdo do href já é suficiente -->
         <a href="https://wa.me/5571991222619" class="botao-wpp"  target="_blank">
           <!-- ícone -->
-          <i class="fa fa-whatsapp"></i>
-         Fale Conosco
+         <span id="fale">Fale Conosco</span>
+         <i id="iconWhats" class="fab fa-whatsapp"></i>
         </a>
     </div>
     <!--  -->
@@ -164,8 +167,8 @@
       <div class="container">
         <h1>Nossos Serviços</h1>
           <div class="row">
-            <div  class="col-sm-3 cont-icon">
-                <img class="icones"  src="{% static 'image/mao_dolar.svg' %}">
+            <div  id="dinheiro" class="col-sm-3 cont-icon">
+                <!-- <img class="icones"  src="{% static 'image/mao_dolar.svg' %}"> -->
             </div>
             <div  class="col-sm-9">
                 <p>Como a contabilidade é algo imprescindível para todas as empresas, independentemente do seu porte, sendo também condição básica para que se possa valer do benefício tributário da distribuição de lucros isenta, efetuamos os registros de acordo com as normas e os pronunciamentos em vigor, evitando possíveis questionamentos em fiscalizações e em pareceres de auditoria. Atendemos a empresas internacionais com a elaboração das demonstrações contábeis em padrões globais como IFRS ou US GAAP.</p>
