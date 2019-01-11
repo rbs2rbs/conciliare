@@ -2,14 +2,81 @@
     background-color: #e2e2e2d7;
 }
 
+#servicos h1{
+    margin-bottom: 50px
+}
+
 .cont-icon{
     border: 2px solid;
     border-radius: 50%;
     height: 100px;
-    weight: 50%;
+    width: 100px;
+    background-size: 63%;
+    background-position: center;
 } 
+
 #dinheiro{
     background-image: url('image/maodolar.svg');
     background-repeat: no-repeat;
+    margin-left: 50%;
     /* background-size: contain; */
+}
+#boneco{
+    background-image: url('image/boneco.svg');
+    background-repeat: no-repeat;
+    margin-left: 17%;
+    /* background-size: contain; */
+}
+#seta{
+    background-image: url('image/seta.svg');
+    background-repeat: no-repeat;
+    margin-left: -50px;
+    /* background-size: contain; */
+}
+#caneta{
+    background-image: url('image/caneta.svg');
+    background-repeat: no-repeat;
+    margin-left: 190px;
+    /* background-size: contain; */
+}
+
+#servicos .container h1{
+    text-align: center;
+}
+.texto-servico{
+    text-align: justify;
+    min-width: 500px;
+}
+
+@media screen and (max-width: 768px){
+    .texto-servico{
+        min-width: 0;
+    }
+    .cont-icon{
+        margin-left: 37% !important;
+    }
+}
+
+.linha-servico{
+    border-style: dashed;
+    width: 1px;
+    margin-left: 618px;
+    margin-top: -170px;
+    margin-bottom: 5px;
+}
+
+.l1{
+    height: 160px;
+    margin-top: -440px;
+    /* margin-left: 618px; */
+}
+.l2{
+    height: 150px;
+    /* margin-left: 600px; */
+    margin-top: -165px;
+}
+.l3{
+    height: 155px;
+    margin-left: -52px;
+    /* margin-left: 600px; */
 }

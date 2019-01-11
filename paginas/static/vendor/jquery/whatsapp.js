@@ -24,6 +24,5 @@ $(document).ready(function(){
         fale.text('');
         iconWhats.addClass("fa-2x").css({'margin-top': '-3px','margin-left': '-2px'});
         whats.css({'border-radius': '50%','width':'45px','height':'45px'});
-        console.log(whats);
     }
 })

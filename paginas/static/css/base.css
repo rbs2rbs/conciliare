@@ -16,6 +16,7 @@
 }
 #top{
     -webkit-animation: opacidade 1.3s ;
+    background-image: linear-gradient(white, #efefef);
 }
 
 #loader {
@@ -97,8 +98,5 @@
 }
 
 #sobre .container{
-    text-align: center;
-}
-#servicos .container{
     text-align: center;
 }
