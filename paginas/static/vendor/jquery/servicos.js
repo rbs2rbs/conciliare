@@ -7,10 +7,9 @@ $(function(){
         $('#boneco').each(function () {
             $(this).insertBefore($(this).prev('.boneco'));
         });
-        console.log($(".caneta"));
-        console.log($(".boneco"));
         $('#caneta').each(function () {
             $(this).insertBefore($(this).prev('.caneta'));
         });
     }
 })
+

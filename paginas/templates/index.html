@@ -23,6 +23,8 @@
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
     <link href="{% static 'css/caixas_links.css' %}" rel="stylesheet">
     <link href="{% static 'css/servicos.css' %}" rel="stylesheet">
+    <link href="{% static 'css/contato.css' %}" rel="stylesheet">
+
 
     <!-- Whats -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -40,20 +42,20 @@
           <span id="dropmenu" class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
+          <ul id="navegar" class="navbar-nav ml-auto">
             <li class="nav-item menu ativo">
-              <a id="home" class="nav-link" href="#home">Página Inicial
+              <a id="carouselExampleIndicatorsM" class="nav-link" href="#"><span>Página Inicial</span>
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item menu">
-              <a class="nav-link scroll" href="#sobre">Sobre</a>
+              <a id="sobreM" class="nav-link" href="#"><span>Sobre</span></a>
             </li>
             <li class="nav-item menu">
-              <a class="nav-link scroll" href="#servicos">Serviços</a>
+              <a id="servicosM" class="nav-link" href="#"><span>Serviços</span></a>
             </li>
             <li class="nav-item menu">
-              <a class="nav-link sroll" href="#contatos">Contatos</a>
+              <a id="contatosM" class="nav-link" href="#"><span>Contatos</span></a>
             </li>
           </ul>
         </div>
@@ -71,7 +73,7 @@
         </a>
     </div>
     <!--  -->
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div id="carouselExampleIndicators" class="carousel slide pos" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li id="testebotao" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -116,7 +118,7 @@
 
     <!-- Page Content -->
     <section id="sobre" class="py-5">
-      <div class="container">
+      <div class="container pos">
         <h1>Alguns Links Uteis</h1>
         <div id="caixa" class="row">
           <div class="col">
@@ -164,7 +166,7 @@
 
     <!-- Page Content -->
     <section id="servicos" class="py-5">
-      <div class="container">
+      <div class="container pos">
         <h1>Nossos Serviços</h1>
           <div class="row">
             <div id="dinheiro" class="cont-icon"></div>
@@ -214,6 +216,26 @@
             </div>
           </div>
       </div>
+
+     <!-- Contatos -->
+    <section id="contatos" class="py-5">
+
+        <div class="container pos">
+            <div class="col">
+                <div class="form-area">  
+                    <form role="form" method="post">
+                      {% csrf_token %}
+                      <div class="formulario-email">{{ form.as_p }}</div>
+                      <p id="caracterRestante"></p>
+                    <div class="form-actions">
+                      <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right">Enviar</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+
+    </section> <!-- end s-contact -->
+     
       
     </section>
     <!-- Footer -->
@@ -252,6 +274,8 @@
     <script src="{% static 'vendor/jquery/touche.js' %}"></script>
     <script src="{% static 'vendor/jquery/caixas.js' %}"></script>
     <script src="{% static 'vendor/jquery/servicos.js' %}"></script>
+    <script src="{% static 'vendor/jquery/menuAtivo.js' %}"></script>
+    <script src="{% static 'vendor/jquery/contato.js' %}"></script>
     <!-- WhatsHelp.io widget -->
     <script src="{% static 'vendor/jquery/whatsapp.js' %}"></script>
     <!-- /WhatsHelp.io widget -->

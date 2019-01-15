@@ -1,8 +1,4 @@
 $(function(){
-    $('.menu').on('click',function(){
-        $('.menu').removeClass('ativo')
-        $(this).addClass('ativo');       
-    });
     $("#home, #logo").on("click", function() {
         $("html, body").animate({ scrollTop: 0 }, "slow");
     });

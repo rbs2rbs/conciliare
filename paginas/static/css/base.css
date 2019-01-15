@@ -18,7 +18,11 @@
     -webkit-animation: opacidade 1.3s ;
     background-image: linear-gradient(white, #efefef);
 }
-
+@media screen and (max-width: 768px){
+    .nav-link span{
+        margin-left: 10px;
+    }
+}
 #loader {
     display: table-cell;
     text-align: center;
