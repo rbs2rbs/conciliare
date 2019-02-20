@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from credenciais import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ SECRET_KEY = 'i#723dw3ya@gsvkv(&5@vds1*j60d$4p(rd8ivh6ey=$*a#jr#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'conciliarecontabilidade.com.br']
 
 
 # Application definition
@@ -40,12 +41,12 @@ INSTALLED_APPS = [
     'paginas'
 ]
 
-EMAIL_BACKEND =  'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'renan.bisposilva@gmail.com'
-EMAIL_HOST_PASSWORD = 'bdxjdaktciatokxl'
-EMAIL_PORT = 465
-EMAIL_USE_SSL = True
+EMAIL_BACKEND =  EMAIL_BACKEND
+EMAIL_HOST = EMAIL_HOST
+EMAIL_HOST_USER = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+EMAIL_PORT = EMAIL_PORT
+EMAIL_USE_SSL = EMAIL_USE_SSL
 
 
 MIDDLEWARE = [

@@ -19,5 +19,9 @@ def inicial(request):
                 send_mail(subject, message, from_email,['renan.bisposilva@gmail.com','RENAN_3022830@trt5.jus.br','renatabastos@live.com'], fail_silently=True,)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return HttpResponse('success')
+            return redirect('/suces')
     return render(request, "index.html", {'form': form})
+
+def email_suces(request):
+    return render(request,"suces.html")
+
