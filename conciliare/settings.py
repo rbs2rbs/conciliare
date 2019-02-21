@@ -26,7 +26,7 @@ SECRET_KEY = 'i#723dw3ya@gsvkv(&5@vds1*j60d$4p(rd8ivh6ey=$*a#jr#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'conciliarecontabilidade.com.br']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.conciliarecontabilidade.com.br']
 
 
 # Application definition
