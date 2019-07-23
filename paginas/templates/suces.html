@@ -78,16 +78,17 @@
         </div>
       </nav>
       <nav id="roda-pe" class="navbar-bot navbar-expand-md bg-inverse fixed-bot scrolling-navbar bot-inv">
-        <div class="container">
+        <div class="container centralizar-fone">
           <div class="row">
             <div class="shake"><i class="lni-pointer-right icone-bot-menu"></i></div>
             <form id="NumForm" method="post">
               {% csrf_token %}
               <div class="row">
-                <div class="form-group col-xs-1">
+                <div class="form-group col-xs-1 tamanaho-fone">
                   {{ numForm.fone }}
                   <!-- <input type="text" class="form-control" id="email" name="email" placeholder="Email" required data-error="Please enter your Email"> -->
                   <div class="help-block with-errors"></div>
+                  <br>
                 </div>
                 <div class="submit-button col-xs-4 shake-tel">
                   <button class="btn btn-common icone-bot-menu lni-phone-handset" id="submit" type="submit"></button>
@@ -1494,7 +1495,7 @@
         </div>
       </div>
       <!-- end -->
-
+      
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="{% static 'js/jquery-min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
