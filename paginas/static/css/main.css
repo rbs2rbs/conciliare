@@ -1461,6 +1461,13 @@ button:focus {
 .box-servico{
   min-height: 100%
 }
+.tamanaho-fone{
+  max-width: 180px;
+}
+
+.centralizar-fone{
+  margin-left: 16%;
+}
 
 .fixed-bot{
   position: fixed;

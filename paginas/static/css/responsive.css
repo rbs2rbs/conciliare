@@ -28,7 +28,7 @@
   #showcase .showcase-slider .screenshot-thumb .fancy-table {
     padding-top: 100px; } }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 768px) {
   .hero-area .contents h2 {
     font-size: 38px; }
   .navbar-expand-md .navbar-nav .nav-link {
@@ -158,6 +158,9 @@
     width: 98%; } }
 
 @media only screen and (max-width: 767px) {
+  #features .feature-item .feature-icon{
+    margin-left: 33%;
+  }
   .fixed-bot{
     position: fixed;
     right: 0;
@@ -400,6 +403,19 @@
     padding-top: 68px; }
   #pricing .pricing-table h1 span {
     left: 16%; } }
+
+@media (max-width: 320px) {
+    .centralizar-fone{
+      margin-left: 6%;
+      margin-top: -2%;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .centralizar-fone{
+      margin-left: 12%;
+    }
+  }
 
 @media (min-width: 414px) and (max-width: 736px) {
   #showcase .showcase-slider .screenshot-thumb .fancy-table {
