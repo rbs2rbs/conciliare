@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">    
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 
+
   </head>
   
   <body>
@@ -52,27 +53,64 @@
                 <a class="nav-link page-scroll" href="#services">O Que Fazemos</a>
               </li>  
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#features">Services</a>
+                <a class="nav-link page-scroll" href="#features">Informações</a>
               </li>                            
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link page-scroll" href="#showcase">Showcase</a>
-              </li>       
+              </li>        -->
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#pricing">Pricing</a>
+                <a class="nav-link page-scroll" href="#pricing">Planos</a>
               </li>     
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link page-scroll" href="#team">Team</a>
-              </li> 
-              <li class="nav-item">
+              </li>  -->
+              <!-- <li class="nav-item">
                 <a class="nav-link page-scroll" href="#blog">Blog</a>
-              </li>  
+              </li>   -->
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#contact">Contact</a>
+                <a class="nav-link page-scroll" href="#contact">Fale conosco</a>
               </li> 
               <!-- <li class="nav-item">
                 <a class="btn btn-singin" href="#">Download</a>
               </li> -->
             </ul>
+          </div>
+        </div>
+      </nav>
+      <nav id="roda-pe" class="navbar-bot navbar-expand-md bg-inverse fixed-bot scrolling-navbar bot-inv">
+        <div class="container">
+          <div class="row">
+            <div class="shake"><i class="lni-pointer-right icone-bot-menu"></i></div>
+            <form id="NumForm" method="post">
+              {% csrf_token %}
+              <div class="row">
+                <div class="form-group col-xs-1">
+                  {{ numForm.fone }}
+                  <!-- <input type="text" class="form-control" id="email" name="email" placeholder="Email" required data-error="Please enter your Email"> -->
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="submit-button col-xs-4 shake-tel">
+                  <button class="btn btn-common icone-bot-menu lni-phone-handset" id="submit" type="submit"></button>
+                  <div id="msgSubmit" class="h3 hidden"></div> 
+                  <div class="clearfix"></div> 
+                </div>
+              </div>
+            </form>
+            <form id="EmailForm" method="post">
+              {% csrf_token %}
+              <div class="row">
+                <div class="form-group col-xs-1">
+                    {{ emailForm.email }}
+                    <!-- <input type="text" class="form-control" id="email" name="email" placeholder="Email" required data-error="Please enter your Email"> -->
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="submit-button col-xs-4">
+                    <button class="btn btn-common experimete" id="submit1" type="submit">Experimente a Conciliare</button>
+                    <div id="msgSubmit" class="h3 hidden"></div> 
+                    <div class="clearfix"></div> 
+                  </div>
+              </div>
+            </form>
           </div>
         </div>
       </nav>  
@@ -85,11 +123,12 @@
               </div>        
           <div class="col-lg-6 col-md-12 col-xs-12">
             <div class="contents">
-              <h2 class="head-title">Contabilidade Digital! Transformando Dados em Informação</h2>
-              <p>Toda a sua contabilidade feita de forma ágil<br>Informações sobre o seu negocio a todo instante</p>
+              <h2 class="head-title">Sua Contabilidade Digital</h2>
+              <!-- <h2>Transformando Dados em Informação</h2> -->
+              <!-- <p>Toda a sua contabilidade feita de forma ágil<br>Informações sobre o seu negocio a todo instante</p> -->
               <div class="header-button">
                 <a href="https://wa.me/5571996766089" target="_blank" class="btn btn-border-filled">Whatsapp</a>
-                <a href="#contact" class="btn btn-border page-scroll">Mande um email</a>
+                <a href="#pricing" class="btn btn-border page-scroll">Abertura de Empresa</a>
               </div>
             </div>
           </div>
@@ -97,64 +136,6 @@
       </div>             
     </header>
     <!-- Header Section End --> 
-
-
-    <!-- Services Section Start -->
-    <section id="services" class="section">
-      <div class="container">
-
-        <div class="row">
-          <!-- Start Col -->
-          <div class="col-lg-3 col-md-6 col-xs-12">
-            <div class="services-item text-center box-servico">
-              <div class="icon">
-                <i class="lni-certificate"></i>
-              </div>
-              <h4>Societária</h4>
-              <p>Realizamos todas as etapas necessárias para abertura, alteração, regularização e baixa da sua empresa.</p>
-            </div>
-          </div>
-          <!-- End Col -->
-          <!-- Start Col -->
-          <div class="col-lg-3 col-md-6 col-xs-12">
-            <div class="services-item text-center box-servico">
-              <div class="icon">
-                <i class="lni-check-mark-circle"></i>
-              </div>
-              <h4>Contábil</h4>
-              <p>Escrituração e elaboração das demonstrações contábeis em conformidade com as normas vigentes e em prazos que auxiliem a tomada de decisão.</p>
-            </div>
-          </div>
-          <!-- End Col -->
-          <!-- Start Col -->
-          <div class="col-lg-3 col-md-6 col-xs-12">
-            <div class="services-item text-center box-servico">
-              <div class="icon">
-                <i class="lni-line-spacing"></i>
-              </div>
-              <h4>Fiscal</h4>
-              <p>Analisamos o melhor regime tributário para sua empresa e efetuamos toda a rotina do departamento fiscal.</p>
-            </div>
-          </div>
-          <!-- End Col -->
-          <!-- Start Col -->
-          <div class="col-lg-3 col-md-6 col-xs-12">
-              <div class="services-item text-center box-servico">
-                <div class="icon">
-                  <i class="lni-folder"></i>
-                </div>
-                <h4>Trabalhista</h4>
-                <p>Cuidamos da elaboração da folha de pagamento e de toda rotina pertinente ao setor de pessoal.</p>
-              </div>
-            </div>
-            <!-- End Col -->
-        </div>
-      </div>
-    </section>
-    <!-- Services Section End -->
-
-
-
     <!-- Business Plan Section Start -->
     <section id="business-plan">
       <div class="container">
@@ -170,10 +151,10 @@
           <!-- Start Col -->
           <div class="col-lg-6 col-md-12 pl-4">
             <div class="business-item-info">
-              <h3>Crafted For Business, Startup and Agency Websites</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim <br> veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br> commodo consequat. Duis aute irure dolor in reprehenderit in voluptate <br> velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              <h3>Na Cociliare, com ciências de dados e análises contábeis, te levaremos ao crescimento</h3>
+              <p>No cenário atula sua contabilidade pode gerar muitos dados <br> importantes e que muitas vezes são negligenciados. Na conciliare <br> transformar seus dados contabeis em um plano estratégico de crescimento <br> é o nosso foco. Fazendo tudo o que uma contabilidade precisa junto <br> a ciência de dados, seu desenvolvimento é certo.</p>
 
-              <a class="btn btn-common" href="#">download</a>
+              <!-- <a class="btn btn-common" href="#">download</a> -->
             </div>
           </div>
           <!-- End Col -->
@@ -181,565 +162,616 @@
         </div>
       </div>
     </section>
-    <!-- Business Plan Section End -->
-
-
-
+      <!-- Business Plan Section End -->
+      <!-- Recent Showcase Section Start -->
+      <section id="showcase">
+          <div class="container-fluid right-position">
+            <!-- Start Row -->
+            <div class="row gradient-bg">
+              <div class="col-lg-12">
+                <div class="showcase-text section-header text-center">  
+                  <div>   
+                    <h2 class="section-title">Novos Tempos para a sua Contabilidade</h2>
+                    <div class="desc-text">
+                      <p>Otimizar sua empresa sempre com análises sólidas</p>  
+                      <p>visando o crescimento e fluiz do seu empreendimento</p>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+    
+            </div>
+            <!-- End Row -->
+            <!-- Start Row -->
+            <div class="row justify-content-center showcase-area">
+              <div class="col-lg-12 col-md-12 col-xs-12 pr-0">
+                <div class="showcase-slider owl-carousel">
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/01.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/02.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/02.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/03.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/03.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/04.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/04.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/05.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/05.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/01.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/02.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/02.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/03.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/03.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/04.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/04.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/05.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/05.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/01.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/02.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/03.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/04.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/05.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/01.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/02.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/03.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/04.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="screenshot-thumb">
+                      <img src="img/showcase/05.jpg" class="img-fluid" alt="" />
+                      <div class="hover-content text-center">
+                        <div class="fancy-table">
+                          <div class="table-cell">
+                            <div class="single-text">
+                              <p>Icon , Web</p>
+                              <h5>Redesign Slack</h5>
+                            </div>
+                            <div class="zoom-icon">
+                              <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
+                              <a href="#"><i class="lni-link"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 
+    
+                  
+                </div>
+              </div>
+            </div>
+            <!-- End Row -->
+          </div>
+        </section>
+        <!-- Recent Showcase Section End --> 
+      <!-- Services Section Start -->
+      <section id="services" class="section">
+          <div class="container">
+    
+            <div class="row">
+              <!-- Start Col -->
+              <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="services-item text-center box-servico">
+                  <div class="icon">
+                    <i class="lni-invention"></i>
+                  </div>
+                  <h4>Societária</h4>
+                  <p>Realizamos todas as etapas necessárias para abertura, alteração, regularização e baixa da sua empresa.</p>
+                </div>
+              </div>
+              <!-- End Col -->
+              <!-- Start Col -->
+              <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="services-item text-center box-servico">
+                  <div class="icon">
+                    <i class="lni-check-mark-circle"></i>
+                  </div>
+                  <h4>Contábil</h4>
+                  <p>Escrituração e elaboração das demonstrações contábeis em conformidade com as normas vigentes e em prazos que auxiliem a tomada de decisão.</p>
+                </div>
+              </div>
+              <!-- End Col -->
+              <!-- Start Col -->
+              <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="services-item text-center box-servico">
+                  <div class="icon">
+                    <i class="lni-stats-up"></i>
+                  </div>
+                  <h4>Fiscal</h4>
+                  <p>Analisamos o melhor regime tributário para sua empresa e efetuamos toda a rotina do departamento fiscal.</p>
+                </div>
+              </div>
+              <!-- End Col -->
+              <!-- Start Col -->
+              <div class="col-lg-3 col-md-6 col-xs-12">
+                  <div class="services-item text-center box-servico">
+                    <div class="icon">
+                      <i class="lni-folder"></i>
+                    </div>
+                    <h4>Trabalhista</h4>
+                    <p>Cuidamos da elaboração da folha de pagamento e de toda rotina pertinente ao setor de pessoal.</p>
+                  </div>
+                </div>
+                <!-- End Col -->
+            </div>
+          </div>
+        </section>
+        <!-- Services Section End -->
     <!-- Cool Fetatures Section Start -->
     <section id="features" class="section">
-      <div class="container">
-        <!-- Start Row -->
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="features-text section-header text-center">  
-              <div>   
-                <h2 class="section-title">Services We Provide</h2>
-                <div class="desc-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore.</p>
-                </div>
-              </div> 
+        <div class="container">
+          <!-- Start Row -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="features-text section-header text-center">  
+                <div>   
+                  <h2 class="section-title">Services We Provide</h2>
+                  <div class="desc-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore.</p>
+                  </div>
+                </div> 
+              </div>
             </div>
+  
           </div>
-
+          <!-- End Row -->
+          <!-- Start Row -->
+          <div class="row featured-bg">
+           <!-- Start Col -->
+            <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+               <!-- Start Fetatures -->
+              <div class="feature-item featured-border1">
+                 <div class="feature-icon float-left">
+                   <i class="lni-coffee-cup"></i>
+                 </div>
+                 <div class="feature-info float-left">
+                   <h4>Easy to Customize</h4>
+                   <p>Producing long lasting organic SEO results for <br> brand of different kinds for more than a decade,<br> we understand that’s your.</p>
+                 </div>
+              </div>
+              <!-- End Fetatures -->
+            </div>
+             <!-- End Col -->
+            
+           <!-- Start Col -->
+            <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+               <!-- Start Fetatures -->
+              <div class="feature-item featured-border2">
+                 <div class="feature-icon float-left">
+                   <i class="lni-briefcase"></i>
+                 </div>
+                 <div class="feature-info float-left">
+                   <h4>Business Template</h4>
+                   <p>Producing long lasting organic SEO results for <br> brand of different kinds for more than a decade,<br> we understand that’s your.</p>
+                 </div>
+              </div>
+              <!-- End Fetatures -->
+            </div>
+             <!-- End Col -->
+            
+           <!-- Start Col -->
+            <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+               <!-- Start Fetatures -->
+              <div class="feature-item featured-border1">
+                 <div class="feature-icon float-left">
+                   <i class="lni-invention"></i>
+                 </div>
+                 <div class="feature-info float-left">
+                   <h4>Clean & Trendy Design</h4>
+                   <p>Producing long lasting organic SEO results for <br> brand of different kinds for more than a decade,<br> we understand that’s your.</p>
+                 </div>
+              </div>
+              <!-- End Fetatures -->
+            </div>
+             <!-- End Col -->
+            
+           <!-- Start Col -->
+            <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+               <!-- Start Fetatures -->
+              <div class="feature-item featured-border2">
+                 <div class="feature-icon float-left">
+                  <i class="lni-layers"></i>
+                 </div>
+                 <div class="feature-info float-left">
+                   <h4>Tons of Sections</h4>
+                   <p>Producing long lasting organic SEO results for <br> brand of different kinds for more than a decade,<br> we understand that’s your.</p>
+                 </div>
+              </div>
+              <!-- End Fetatures -->
+            </div>
+             <!-- End Col -->
+            
+           <!-- Start Col -->
+            <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+               <!-- Start Fetatures -->
+              <div class="feature-item featured-border3">
+                 <div class="feature-icon float-left">
+                   <i class="lni-reload"></i>
+                 </div>
+                 <div class="feature-info float-left">
+                   <h4>Free Future Updates</h4>
+                   <p>Producing long lasting organic SEO results for <br> brand of different kinds for more than a decade,<br> we understand that’s your.</p>
+                 </div>
+              </div>
+              <!-- End Fetatures -->
+            </div>
+             <!-- End Col -->
+            
+           <!-- Start Col -->
+            <div class="col-lg-6 col-md-6 col-xs-12 p-0">
+               <!-- Start Fetatures -->
+              <div class="feature-item">
+                 <div class="feature-icon float-left">
+                   <i class="lni-support"></i>
+                 </div>
+                 <div class="feature-info float-left">
+                   <h4>Premier Support</h4>
+                   <p>Producing long lasting organic SEO results for <br> brand of different kinds for more than a decade,<br> we understand that’s your.</p>
+                 </div>
+              </div>
+              <!-- End Fetatures -->
+            </div>
+             <!-- End Col -->
+            
+  
+          </div>
+          <!-- End Row -->
         </div>
-        <!-- End Row -->
-        <!-- Start Row -->
-        <div class="row featured-bg">
-         <!-- Start Col -->
-          <div class="col-lg-6 col-md-6 col-xs-12 p-0">
-             <!-- Start Fetatures -->
-            <div class="feature-item featured-border1">
-               <div class="feature-icon float-left">
-                 <i class="lni-coffee-cup"></i>
-               </div>
-               <div class="feature-info float-left">
-                 <h4>Easy to Customize</h4>
-                 <p>Producing long lasting organic SEO results for <br> brand of different kinds for more than a decade,<br> we understand that’s your.</p>
-               </div>
-            </div>
-            <!-- End Fetatures -->
-          </div>
-           <!-- End Col -->
-          
-         <!-- Start Col -->
-          <div class="col-lg-6 col-md-6 col-xs-12 p-0">
-             <!-- Start Fetatures -->
-            <div class="feature-item featured-border2">
-               <div class="feature-icon float-left">
-                 <i class="lni-briefcase"></i>
-               </div>
-               <div class="feature-info float-left">
-                 <h4>Business Template</h4>
-                 <p>Producing long lasting organic SEO results for <br> brand of different kinds for more than a decade,<br> we understand that’s your.</p>
-               </div>
-            </div>
-            <!-- End Fetatures -->
-          </div>
-           <!-- End Col -->
-          
-         <!-- Start Col -->
-          <div class="col-lg-6 col-md-6 col-xs-12 p-0">
-             <!-- Start Fetatures -->
-            <div class="feature-item featured-border1">
-               <div class="feature-icon float-left">
-                 <i class="lni-invention"></i>
-               </div>
-               <div class="feature-info float-left">
-                 <h4>Clean & Trendy Design</h4>
-                 <p>Producing long lasting organic SEO results for <br> brand of different kinds for more than a decade,<br> we understand that’s your.</p>
-               </div>
-            </div>
-            <!-- End Fetatures -->
-          </div>
-           <!-- End Col -->
-          
-         <!-- Start Col -->
-          <div class="col-lg-6 col-md-6 col-xs-12 p-0">
-             <!-- Start Fetatures -->
-            <div class="feature-item featured-border2">
-               <div class="feature-icon float-left">
-                <i class="lni-layers"></i>
-               </div>
-               <div class="feature-info float-left">
-                 <h4>Tons of Sections</h4>
-                 <p>Producing long lasting organic SEO results for <br> brand of different kinds for more than a decade,<br> we understand that’s your.</p>
-               </div>
-            </div>
-            <!-- End Fetatures -->
-          </div>
-           <!-- End Col -->
-          
-         <!-- Start Col -->
-          <div class="col-lg-6 col-md-6 col-xs-12 p-0">
-             <!-- Start Fetatures -->
-            <div class="feature-item featured-border3">
-               <div class="feature-icon float-left">
-                 <i class="lni-reload"></i>
-               </div>
-               <div class="feature-info float-left">
-                 <h4>Free Future Updates</h4>
-                 <p>Producing long lasting organic SEO results for <br> brand of different kinds for more than a decade,<br> we understand that’s your.</p>
-               </div>
-            </div>
-            <!-- End Fetatures -->
-          </div>
-           <!-- End Col -->
-          
-         <!-- Start Col -->
-          <div class="col-lg-6 col-md-6 col-xs-12 p-0">
-             <!-- Start Fetatures -->
-            <div class="feature-item">
-               <div class="feature-icon float-left">
-                 <i class="lni-support"></i>
-               </div>
-               <div class="feature-info float-left">
-                 <h4>Premier Support</h4>
-                 <p>Producing long lasting organic SEO results for <br> brand of different kinds for more than a decade,<br> we understand that’s your.</p>
-               </div>
-            </div>
-            <!-- End Fetatures -->
-          </div>
-           <!-- End Col -->
-          
-
-        </div>
-        <!-- End Row -->
-      </div>
-    </section>
-    <!-- Cool Fetatures Section End --> 
+      </section>
+      <!-- Cool Fetatures Section End -->
 
 
-    <!-- Recent Showcase Section Start -->
-    <section id="showcase">
-      <div class="container-fluid right-position">
-        <!-- Start Row -->
-        <div class="row gradient-bg">
-          <div class="col-lg-12">
-            <div class="showcase-text section-header text-center">  
-              <div>   
-                <h2 class="section-title">Recent Works</h2>
-                <div class="desc-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>  
-                  <p>eiusmod tempor incididunt ut labore et dolore.</p>
-                </div>
-              </div> 
-            </div>
-          </div>
-
-        </div>
-        <!-- End Row -->
-        <!-- Start Row -->
-        <div class="row justify-content-center showcase-area">
-          <div class="col-lg-12 col-md-12 col-xs-12 pr-0">
-            <div class="showcase-slider owl-carousel">
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/01.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/02.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/02.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/03.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/03.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/04.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/04.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/05.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/05.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/01.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/02.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/02.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/03.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/03.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/04.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/04.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/05.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/05.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/01.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/02.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/03.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/04.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/05.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/01.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/02.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/03.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/04.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="screenshot-thumb">
-                  <img src="img/showcase/05.jpg" class="img-fluid" alt="" />
-                  <div class="hover-content text-center">
-                    <div class="fancy-table">
-                      <div class="table-cell">
-                        <div class="single-text">
-                          <p>Icon , Web</p>
-                          <h5>Redesign Slack</h5>
-                        </div>
-                        <div class="zoom-icon">
-                          <a class="lightbox" href="img/showcase/01.jpg"><i class="lni-zoom-in"></i></a>
-                          <a href="#"><i class="lni-link"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-             
-
-              
-            </div>
-          </div>
-        </div>
-        <!-- End Row -->
-      </div>
-    </section>
-    <!-- Recent Showcase Section End --> 
+ 
 
     <!-- Our Pricing Plan Section Start -->
-    <section id="pricing" class="section">
+    <section id="pricing" class="section" >
       <div class="container">
         <!-- Start Row -->
         <div class="row">
           <div class="col-lg-12">
             <div class="pricing-text section-header text-center">  
               <div>   
-                <h2 class="section-title">Pricing Plans</h2>
-                <div class="desc-text">
+                <h2 class="section-title">Nossos Planos</h2>
+                <!-- <div class="desc-text">
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>  
                   <p>eiusmod tempor incididunt ut labore et dolore.</p>
-                </div>
+                </div> -->
               </div> 
             </div>
           </div>
@@ -749,68 +781,85 @@
         <!-- Start Row -->
         <div class="row pricing-tables">
          <!--  Start Col -->
-          <div class="col-lg-4 col-md-4 col-xs-12">
-            <div class="pricing-table text-center">
+          <div class="col-lg-3 col-md-3 col-xs-12">
+            <div class="pricing-table text-center preco-tamanho">
               <div class="pricing-details">
-                <h3>Free</h3>
-                <h1><span>$</span>00</h1>
+                <h3>Abertura de Empresas</h3>
+                <h1 class="preco-posicao"><span>R$</span>00</h1>
                 <ul>
-                  <li>Free Instalation</li>
-                  <li>500MB Storage</li>
-                  <li>Single User</li>
-                  <li>5 GB Bandwith</li>
+                  <li>Abertura de Empresa Grátis*</li><br>
+                  <li>Análises Mensais</li><br>
+                  <li>Relátorios Estátisticos</li><br>
+                  <!-- <li>5 GB Bandwith</li>
                   <li>Minimal Features</li>
-                  <li>No Dashboard</li>
+                  <li>No Dashboard</li> -->
                 </ul>
+                <p style="font-size: 10px;">*Na aquilisção do plano anual</p>
               </div>
               <div class="plan-button">
-                <a href="#" class="btn btn-border">Purchase</a>
+                <button type="button" class="btn btn-border" data-toggle="modal" data-target="#exampleModal" data-plano="Abertura">Saiba Mais</button>
+                <!-- <a href="#" class="btn btn-border">Saiba Mais</a> -->
               </div>
             </div>
           </div>
            <!--  End Col -->
          <!--  Start Col -->
-          <div class="col-lg-4 col-md-4 col-xs-12">
-            <div class="pricing-table text-center">
+          <div class="col-lg-3 col-md-3 col-xs-12">
+            <div class="pricing-table text-center preco-tamanho">
               <div class="pricing-details">
-                <h3>standard</h3>
-                <h1><span>$</span>19.99</h1>
+                <h3>Mensal</h3>
+                <h1 class="preco-posicao"><span>R$</span>109,90</h1>
                 <ul>
-                  <li>Free Instalation</li>
-                  <li>2 GB Storage</li>
-                  <li>Upto 2 users</li>
-                  <li>50 GB Bandwith</li>
-                  <li>All Features</li>
-                  <li>Sales Dashboard</li>                  
+                  <li>Lançamentos Digitais</li><br>
+                  <li>Análises Mensais</li><br>
+                  <li>Relátorios Estátisticos</li><br>                  
                 </ul>
               </div>
-              <div class="plan-button">
-                <a href="#" class="btn btn-common">Purchase</a>
+              <div class="plan-button margem-botao-preco">
+                <button type="button" class="btn btn-border" data-toggle="modal" data-target="#exampleModal" data-plano="Mensal">Saiba Mais</button>
+                <!-- <a href="#" class="btn btn-border">Saiba Mais</a> -->
               </div>
             </div>
           </div>
            <!--  End Col -->
          <!--  Start Col -->
-          <div class="col-lg-4 col-md-4 col-xs-12">
-            <div class="pricing-table text-center">
+          <div class="col-lg-3 col-md-3 col-xs-12">
+            <div class="pricing-table text-center preco-tamanho">
               <div class="pricing-details">
-                <h3>Business</h3>
-                <h1><span>$</span>29.99</h1>
+                <h3>Semestral</h3>
+                <h1 class="preco-posicao"><span>R$</span>599,90</h1>
                 <ul>
-                  <li>Free Instalation</li>
-                  <li>5 GB Storage</li>
-                  <li>Upto 4 users</li>
-                  <li>100 GB Bandwith</li>
-                  <li>All Features</li>
-                  <li>Sales Dashboard</li>
+                  <li>Lançamentos Digitais</li><br>
+                  <li>Análises Mensais</li><br>
+                  <li>Relátorios Estátisticos</li><br>
                 </ul>
               </div>
-              <div class="plan-button">
-                <a href="#" class="btn btn-border">Purchase</a>
+              <div class="plan-button margem-botao-preco">
+                <button type="button" class="btn btn-common" data-toggle="modal" data-target="#exampleModal" data-plano="Semestral">Saiba Mais</button>
+                <!-- <a href="#" class="btn btn-common">Saiba Mais</a> -->
               </div>
             </div>
           </div>
            <!--  End Col -->
+           <!--  Start Col -->
+          <div class="col-lg-3 col-md-3 col-xs-12">
+              <div class="pricing-table text-center preco-tamanho">
+                <div class="pricing-details">
+                  <h3>Anual</h3>
+                  <h1 class="preco-posicao"><span>R$</span>999,90</h1>
+                  <ul>
+                    <li>Lançamentos Digitais</li><br>
+                    <li>Análises Mensais</li><br>
+                    <li>Relátorios Estátisticos</li><br>
+                  </ul>
+                </div>
+                <div class="plan-button margem-botao-preco">
+                  <button type="button" class="btn btn-border" data-toggle="modal" data-target="#exampleModal" data-plano="Anual">Saiba Mais</button>
+                  <!-- <a href="#" class="btn btn-border">Saiba Mais</a> -->
+                </div>
+              </div>
+            </div>
+             <!--  End Col -->
 
         </div>
         <!-- End Row -->
@@ -819,7 +868,7 @@
     <!-- Our Pricing Plan Section End --> 
 
     <!-- Client Testimoninals Section Start -->
-    <section id="testimonial" class="section">
+    <section id="testimonial" class="section" style="display: none">
       <div class="container right-position">
         <!-- Start Row -->
         <div class="row">
@@ -927,7 +976,7 @@
 
 
     <!-- Team section Start -->
-    <section id="team" class="section">
+    <section id="team" class="section" style="display: none">
       <div class="container">
         <!-- Start Row -->
         <div class="row">
@@ -1052,7 +1101,7 @@
 
 
     <!-- Blog Section -->
-    <section id="blog" class="section">
+    <section id="blog" class="section" style="display: none">
       <!-- Container Starts -->
       <div class="container">
         <!-- Start Row -->
@@ -1155,10 +1204,10 @@
           <div class="col-lg-12">
             <div class="contact-text section-header text-center">  
               <div>   
-                <h2 class="section-title">Get In Touch</h2>
+                <h2 class="section-title">Entre em contato</h2>
                 <div class="desc-text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do</p>  
-                  <p>eiusmod tempor incididunt ut labore et dolore.</p>
+                  <p>Nos mande uma mensagem com algo que querira</p>  
+                  <p>saber sobre a Conciliare.</p>
                 </div>
               </div> 
             </div>
@@ -1172,7 +1221,7 @@
           <div class="col-lg-6 col-md-12">
           <!-- <form name="contactForm" role="form" id="contactForm" method="post" action="javascript:void(0);" novalidate="novalidate"  accept-charset="utf-8"> -->
                  
-          <form id="contactForm" method="post">
+          <form id="MensagemForm" method="post">
           <!-- <form name="contactForm" role="form" id="contactForm" method="post" action="javascript:void(0);" novalidate="novalidate"  accept-charset="utf-8"> -->
             {% csrf_token %}
             <div class="row">
@@ -1210,7 +1259,7 @@
                   <div class="help-block with-errors"></div>
                 </div>
                 <div class="submit-button">
-                  <button class="btn btn-common" id="submit" type="submit">Submit</button>
+                  <button class="btn btn-common" id="submit" type="submit">Enviar</button>
                   <div id="msgSubmit" class="h3 hidden"></div> 
                   <div class="clearfix"></div> 
                 </div>
@@ -1349,6 +1398,102 @@
       <div class="loader" id="loader-1"></div>
     </div>
     <!-- End Preloader -->
+    <!-- botao modal -->
+    <button id="butaoModal" style="display: none;" data-toggle="modal" data-target="#boxLoad" ></button>
+    <!-- end -->
+    <!-- Carregamento de envios -->
+    <div id="boxLoad" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div id="preloader" class="box-load">
+                  <div class="loader" id="loader-1"></div>
+              </div>
+              <div class="modal-header box-texto">
+                  <h3 class="modal-title posicao-titulo-box">Em Breve Entraremos em Contato</h3>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary botao-fechar">Obrigado!</button>
+            </div>
+          </div>
+      </div>
+      <!-- end -->
+
+
+      <!-- box Preço -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Conte mais sobre você</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form id="MensagemForm" method="post">
+                <!-- <form name="contactForm" role="form" id="contactForm" method="post" action="javascript:void(0);" novalidate="novalidate"  accept-charset="utf-8"> -->
+                  {% csrf_token %}
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        {{ form.nome }}
+                        <!-- <input type="text" class="form-control" id="name" name="name" placeholder="Name" required data-error="Please enter your name"> -->
+                        <div class="help-block with-errors"></div>
+                      </div>                                 
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="numero" name="numero" placeholder="Telefone" required data-error="Please enter your name">
+                        <div class="help-block with-errors"></div>
+                      </div>                                 
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group" style="display:none">
+                        {{ form.subject }}
+                        <!-- <input type="text" placeholder="Subject" id="msg_subject" class="form-control" name="msg_subject" required data-error="Please enter your subject"> -->
+                        <div class="help-block with-errors"></div>
+                      </div> 
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        {{ form.from_email }}
+                        <!-- <input type="text" class="form-control" id="email" name="email" placeholder="Email" required data-error="Please enter your Email"> -->
+                        <div class="help-block with-errors"></div>
+                      </div>                                 
+                    </div>
+                    <!-- <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" placeholder="Budget" id="budget" class="form-control" name="budget" required data-error="Please enter your Budget">
+                        <div class="help-block with-errors"></div>
+                      </div> 
+                    </div> -->
+                    <div class="col-md-12">
+                      <div class="form-group" style="display:none"> 
+                        {{ form.message }}
+                        <!-- <textarea class="form-control" id="message"  name="message" placeholder="Write Message" rows="4" data-error="Write your message" required></textarea> -->
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <div class="submit-button">
+                        <button class="btn btn-common" id="submit-box" type="submit">Enviar</button>
+                        <div id="msgSubmit" class="h3 hidden"></div> 
+                        <div class="clearfix"></div> 
+                      </div>
+                    </div>
+                  </div>            
+                </form>
+                <div id="preloader" class="box-load">
+                    <div class="loader" id="loader-1"></div>
+                </div>
+            </div>
+            <div class="modal-footer" style="display:none">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="{% static 'js/jquery-min.js' %}"></script>
@@ -1361,6 +1506,8 @@
     <script src="{% static 'js/nivo-lightbox.js' %}"></script>     
     <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>      
     <script src="{% static 'js/main.js' %}"></script>
-    
+    <script src="{% static 'js/box.js' %}"></script>
+    <script src="{% static 'js/munu-rodaPe.js' %}"></script>
+    <script src="{% static 'js/box-preco.js' %}"></script>
   </body>
 </html>

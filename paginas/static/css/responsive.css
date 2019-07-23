@@ -158,20 +158,39 @@
     width: 98%; } }
 
 @media only screen and (max-width: 767px) {
+  .fixed-bot{
+    position: fixed;
+    right: 0;
+    top:85%;
+    left: 0;
+    z-index: 1030;
+  }
+  .lni-phone-handset.icone-bot-menu{
+    width: 70px;
+    margin-top: -13px;
+    background-color: transparent;
+    box-shadow: none;
+    margin-right: 0px;
+  }
+  #roda-pe .container {
+    min-height: 300px;
+  }
   .bg-inverse {
-    background: #191c1e; }
+    background:#4386eb ; }
   .navbar-expand-md .navbar-brand, .navbar-expand-md .navbar-toggler {
     margin: 6px 15px; }
   .bg-inverse {
-    background: #191c1e; }
+    background:#4386eb ; }
   .navbar {
     padding: 0; }
+    .navbar-bot {
+      padding: 17px; }
   .navbar-brand img {
     width: 100px; } }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .bg-inverse {
-    background: #191c1e; }
+    background:#4386eb ; }
   .navbar {
     padding: 0; }
   .navbar-brand img {
@@ -207,7 +226,7 @@
     color: #fff;
     -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-    width: 165px;
+    width: 190px;
     height: 45px;
     padding: 15px 15px; }
   .hero-area .intro-img {

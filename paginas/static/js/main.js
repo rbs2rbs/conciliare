@@ -103,15 +103,14 @@
             target: '.navbar-collapse',
             offset: 195
         });
-
         $(window).on('scroll', function() {
             if ($(window).scrollTop() > 100) {
                 $('.fixed-top').addClass('menu-bg');
+                // $('.fixed-bot').addClass('menu-bg').css('display','block');
             } else {
                 $('.fixed-top').removeClass('menu-bg');
             }
         });
-
     });
 
   /* Auto Close Responsive Navbar on Click

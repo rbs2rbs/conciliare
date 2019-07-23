@@ -3,5 +3,6 @@ from paginas import views
 
 urlpatterns = [
     url(r'^$',views.inicial),
-    url("suces",views.email_suces)
+    url("suces",views.email_suces),
+    url("valido",views.valido)
 ]
