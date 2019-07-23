@@ -126,7 +126,7 @@ def email_suces(request):
             nome = form.cleaned_data['nome']
             message = "%s\n%s\n%s" % (nome, from_email,form.cleaned_data['message'])
             try:
-                send_mail(subject, message, from_email,['renan.bisposilva@gmail.com','RENAN_3022830@trt5.jus.br','renatabastos@live.com'], fail_silently=False,)
+                send_mail(subject, message, from_email,['renan.bisposilva@gmail.com','renatabastos@live.com'], fail_silently=False,)
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('/suces')
