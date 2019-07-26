@@ -101,7 +101,7 @@
     font-size: 13px;
     margin-left: 12px; }
   .hero-area .contents {
-    padding: 200px 0 0px; }
+    padding: 331px 0 0px; }
   #features .feature-item p {
     font-size: 14px;
     display: block;
@@ -160,6 +160,9 @@
 @media only screen and (max-width: 767px) {
   #features .feature-item .feature-icon{
     margin-left: 33%;
+  }
+  #EmailForm{
+    display:none;
   }
   .fixed-bot{
     position: fixed;
@@ -411,11 +414,96 @@
     }
   }
 
-  @media (max-width: 360px) {
-    .centralizar-fone{
-      margin-left: 12%;
-    }
+@media (min-width: 300px) and(max-width: 358px) {
+  .centralizar-fone{
+    margin-left: 11%;
   }
+}
+
+@media (min-width: 359px) and (max-width: 361px) {
+  .centralizar-fone{
+    margin-left: 12% !important;
+  }
+}
+
+@media (min-width: 410px) and (max-width: 412px) {
+  .centralizar-fone{
+    margin-top: 2%;
+  }
+}
+
+@media (min-width: 374px) and (max-width: 376px) {
+  .centralizar-fone{
+    margin-left: 14%;
+  }
+}
+
+@media (min-width: 413px) and (max-width: 415px) {
+  .centralizar-fone{
+    margin-left: 17%;
+  }
+}
+
+
+@media (min-width: 767px) and (max-width: 769px) {
+  .centralizar-fone{
+    margin-left: 31%;
+  }
+  #EmailForm{
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .margem-form-bot{
+    margin-right: -300px;
+  }
+  .preco-posicao {
+    padding-left: 30px !important;
+    font-size: 30px !important;
+  }
+  .preco-tamanho {
+    min-height: 600px;
+  }
+  .margem-botao-preco {
+    margin-top: 130px;
+  }
+  #pricing .pricing-table ul li {
+    line-height: 20px;
+  }
+  .texto-obs{
+    margin-bottom: 12px;
+  }
+  .dim-btn{
+    max-width: 120px;
+  }
+}
+
+
+@media (min-width: 992px) and (max-width: 1280px) {
+  /* .margem-form-bot{
+    margin-right: -300px;
+  }
+  .preco-posicao {
+    padding-left: 30px !important;
+    font-size: 30px !important;
+  } */
+  .preco-tamanho {
+    min-height: 580px;
+  }
+  .margem-botao-preco {
+    margin-top: 130px;
+  }
+  .texto-obs{
+    margin-bottom: 12px;
+  }
+  /* #pricing .pricing-table ul li {
+    line-height: 20px;
+  }
+  .dim-btn{
+    max-width: 120px;
+  } */
+}
 
 @media (min-width: 414px) and (max-width: 736px) {
   #showcase .showcase-slider .screenshot-thumb .fancy-table {

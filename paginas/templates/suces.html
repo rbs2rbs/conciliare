@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Equipe de consultoria contábil de atendimento personalizado, buscando oferecer serviço para alavancar sua Empresa">
     <META NAME="ABSTRACT" CONTENT="Equipe de consultoria contábil de atendimento personalizado, buscando oferecer serviço para alavancar sua Empresa">
-    <META NAME="KEYWORDS" CONTENT="Contabilidade, consultoria, Gestão de Empresas, Aumentar Receita, Impostos" >
+    <META NAME="KEYWORDS" CONTENT="Contabilidade, consultoria, Gestão de Empresas, Aumentar Receita, Ciência de Dados" >
     <META NAME="ROBOT" CONTENT="Index,Follow" >
     <meta name="author" content="Renata Bastos">
+    <meta name="author" content="Renan Bispo">
 
-    <title>Conciliare</title>
+    <title>Conciliare - Contabilidade e Ciências de Dados</title>
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{% static 'img/logo.png' %}" type="image/png">
     <!-- Bootstrap CSS -->
@@ -83,7 +84,7 @@
             <div class="shake"><i class="lni-pointer-right icone-bot-menu"></i></div>
             <form id="NumForm" method="post">
               {% csrf_token %}
-              <div class="row">
+              <div class="row margem-form-bot">
                 <div class="form-group col-xs-1 tamanaho-fone">
                   {{ numForm.fone }}
                   <!-- <input type="text" class="form-control" id="email" name="email" placeholder="Email" required data-error="Please enter your Email"> -->
@@ -99,7 +100,7 @@
             </form>
             <form id="EmailForm" method="post">
               {% csrf_token %}
-              <div class="row">
+              <div class="row margem-form-bot">
                 <div class="form-group col-xs-1">
                     {{ emailForm.email }}
                     <!-- <input type="text" class="form-control" id="email" name="email" placeholder="Email" required data-error="Please enter your Email"> -->
@@ -152,9 +153,16 @@
           <!-- Start Col -->
           <div class="col-lg-6 col-md-12 pl-4">
             <div class="business-item-info">
-              <h3>Conciliare, contabilidade com inovação e tecnologia</h3>
-              <p>No cenário atula sua contabilidade pode gerar muitos dados <br> importantes e que muitas vezes são negligenciados. Na conciliare <br> transformar seus dados contabeis em um plano estratégico de crescimento <br> é o nosso foco. Fazendo tudo o que uma contabilidade precisa junto <br> a ciência de dados, seu desenvolvimento é certo.</p>
-
+              <h3>Contabilidade com inovação e tecnologia</h3>
+              <p>
+                Em uma empresa, tomar decisões nem sempre é fácil. Cada passo dado na direção 
+                errada poderá resultar em prejuízos futuros. A análise das informações contábeis
+                é a melhor forma de evitar tal situação. <br> Na Conciliare, utilizamos a data science 
+                para analisar seus dados de forma segura, apresentando estimativas futuras e sermos
+                assertivos no que influenciou seus resultados. Aqui, transformar suas informações
+                em um plano estratégico é o nosso maior foco.
+              </p> 
+                 
               <!-- <a class="btn btn-common" href="#">download</a> -->
             </div>
           </div>
@@ -172,8 +180,8 @@
               <div class="col-lg-12">
                 <div class="showcase-text section-header text-center">  
                   <div>   
-                    <h2 class="section-title">Novos Tempos para a sua Contabilidade</h2>
-                    <div class="desc-text">
+                    <h2 class="section-title">CONTABILIDADE DIGITAL ESPECIALIZADA NO SEU NEGÓCIO</h2>
+                    <div class="desc-text" style="display:none">
                       <p>Otimizar sua empresa sempre com análises sólidas</p>  
                       <p>visando o crescimento e fluiz do seu empreendimento</p>
                     </div>
@@ -662,20 +670,19 @@
           <div class="col-lg-3 col-md-3 col-xs-12">
             <div class="pricing-table text-center preco-tamanho">
               <div class="pricing-details">
-                <h3>Abertura de Empresas</h3>
+                <h3>Abertura de Empresa</h3>
                 <h1 class="preco-posicao"><span>R$</span>00</h1>
                 <ul>
-                  <li>Abertura de Empresa Grátis*</li><br>
-                  <li>Análises Mensais</li><br>
-                  <li>Relátorios Estátisticos</li><br>
-                  <!-- <li>5 GB Bandwith</li>
-                  <li>Minimal Features</li>
-                  <li>No Dashboard</li> -->
+                  <li>Abrimos sua Empresa Grátis*</li><br>
+                  <li>Elaboração da documentação obrigatória de abertura </li><br>
+                  <li>Orientação sobre o melhor enquadramento da empresa</li><br>
+                  <li>Consultoria durante o processo</li><br>
+                  <li>Não incluso no plano: Valor das taxas de impostos da Prefeitura e Junta Comercial.</li><br>
                 </ul>
-                <p style="font-size: 10px;">*Na aquilisção do plano anual</p>
+                <p class="texto-obs">*Na contratação do plano anual</p>
               </div>
               <div class="plan-button">
-                <button type="button" class="btn btn-border" data-toggle="modal" data-target="#exampleModal" data-plano="Abertura">Saiba Mais</button>
+                <button type="button" class="btn btn-border dim-btn" data-toggle="modal" data-target="#exampleModal" data-plano="Abertura">Saiba Mais</button>
                 <!-- <a href="#" class="btn btn-border">Saiba Mais</a> -->
               </div>
             </div>
@@ -685,16 +692,16 @@
           <div class="col-lg-3 col-md-3 col-xs-12">
             <div class="pricing-table text-center preco-tamanho">
               <div class="pricing-details">
-                <h3>Mensal</h3>
+                <h3>Básico</h3>
                 <h1 class="preco-posicao"><span>R$</span>109,90</h1>
                 <ul>
-                  <li>Lançamentos Digitais</li><br>
-                  <li>Análises Mensais</li><br>
-                  <li>Relátorios Estátisticos</li><br>                  
+                  <li>Contabilidade Digital</li><br>
+                  <li>Seus impostos mensais</li><br>
+                  <li>Suporte online completo</li><br>                  
                 </ul>
               </div>
               <div class="plan-button margem-botao-preco">
-                <button type="button" class="btn btn-border" data-toggle="modal" data-target="#exampleModal" data-plano="Mensal">Saiba Mais</button>
+                <button type="button" class="btn btn-border dim-btn" data-toggle="modal" data-target="#exampleModal" data-plano="Mensal">Saiba Mais</button>
                 <!-- <a href="#" class="btn btn-border">Saiba Mais</a> -->
               </div>
             </div>
@@ -704,16 +711,18 @@
           <div class="col-lg-3 col-md-3 col-xs-12">
             <div class="pricing-table text-center preco-tamanho">
               <div class="pricing-details">
-                <h3>Semestral</h3>
+                <h3>Padrão</h3>
                 <h1 class="preco-posicao"><span>R$</span>599,90</h1>
                 <ul>
-                  <li>Lançamentos Digitais</li><br>
-                  <li>Análises Mensais</li><br>
-                  <li>Relátorios Estátisticos</li><br>
+                  <li>Contabilidade Digital</li><br>
+                  <li>Seus impostos mensais</li><br>
+                  <li>Suporte online completo</li><br>
+                  <li>Análises Contábeis Semestrais</li><br>
+                  <li>Gestão das Licenças obrigatórias</li><br>
                 </ul>
               </div>
               <div class="plan-button margem-botao-preco">
-                <button type="button" class="btn btn-common" data-toggle="modal" data-target="#exampleModal" data-plano="Semestral">Saiba Mais</button>
+                <button type="button" class="btn btn-common dim-btn" data-toggle="modal" data-target="#exampleModal" data-plano="Semestral">Saiba Mais</button>
                 <!-- <a href="#" class="btn btn-common">Saiba Mais</a> -->
               </div>
             </div>
@@ -723,16 +732,18 @@
           <div class="col-lg-3 col-md-3 col-xs-12">
               <div class="pricing-table text-center preco-tamanho">
                 <div class="pricing-details">
-                  <h3>Anual</h3>
+                  <h3>Personalizado</h3>
                   <h1 class="preco-posicao"><span>R$</span>999,90</h1>
                   <ul>
-                    <li>Lançamentos Digitais</li><br>
-                    <li>Análises Mensais</li><br>
-                    <li>Relátorios Estátisticos</li><br>
+                    <li>Inclui o plano padrão</li><br>
+                    <li>Análises Contábeis e Gerenciais trimestrais</li><br>
+                    <li>Relatórios Estatísticos</li><br>
+                    <li>Planejamento Estratégico</li><br>
+                    <li>Consultoria mensal</li><br>
                   </ul>
                 </div>
                 <div class="plan-button margem-botao-preco">
-                  <button type="button" class="btn btn-border" data-toggle="modal" data-target="#exampleModal" data-plano="Anual">Saiba Mais</button>
+                  <button type="button" class="btn btn-border dim-btn" data-toggle="modal" data-target="#exampleModal" data-plano="Anual">Saiba Mais</button>
                   <!-- <a href="#" class="btn btn-border">Saiba Mais</a> -->
                 </div>
               </div>
@@ -752,7 +763,7 @@
             <div class="col-lg-12">
               <div class="features-text section-header text-center">  
                 <div>   
-                  <h2 class="section-title">Alguns Links Úteis</h2>
+                  <h2 class="section-title">Links Importantes</h2>
                   <div class="desc-text" style="display:none">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br> eiusmod tempor incididunt ut labore et dolore.</p>
                   </div>
@@ -1307,7 +1318,22 @@
     <footer>
       <!-- Footer Area Start -->
       <section id="footer-Content">
-        <div class="container">
+          <div class="copyright">
+              <div class="container">
+                <!-- Star Row -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="site-info text-center">
+                      <p>Crafted by <a href="http://uideck.com" rel="nofollow">UIdeck</a></p>
+                    </div>              
+                    
+                  </div>
+                  <!-- End Col -->
+                </div>
+                <!-- End Row -->
+              </div>
+            </div>
+        <div class="container" style="display: none">
           <!-- Start Row -->
           <div class="row">
 
@@ -1377,7 +1403,7 @@
         </div>
         <!-- Copyright Start  -->
 
-        <div class="copyright">
+        <div class="copyright" style="display: none">
           <div class="container">
             <!-- Star Row -->
             <div class="row">

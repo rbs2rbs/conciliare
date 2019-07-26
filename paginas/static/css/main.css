@@ -1557,6 +1557,18 @@ button:focus {
   margin-top: 50px;
 }
 
+.texto-obs{
+  font-size: 10px;
+}
+
+#footer-Content{
+  min-height: 150px;
+}
+
+#footer-Content .copyright {
+  margin-top: -31px !important;
+}
+
 @keyframes shake {
   0%, 2%, 4%, 6%, 8%, 10%, 12%, 14%, 16%, 18%, 20%, 22% {
     -webkit-transform: translate3d(-2px, 0, 0);
